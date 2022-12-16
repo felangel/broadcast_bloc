@@ -9,8 +9,8 @@ class CounterCubit extends BroadcastCubit<int> {
 
   void increment() => emit(state + 1);
 
-  /// Optionally override `toMessage` to customize the format
-  /// of the state before it is broadcast to all subscribers.
+  // Optionally override `toMessage` to customize the format
+  // of the state before it is broadcast to all subscribers.
   @override
   Object toMessage(int state) => 'count: $state';
 }

@@ -8,6 +8,38 @@
 
 An extension to the bloc state management library which adds support for broadcasting state changes to stream channels.
 
+## Quick Start 🚀
+
+```dart
+// Extend `BroadcastCubit` instead of `Cubit`.
+// The package also exports:
+// * `BroadcastBloc`
+// * `BroadcastMixin`
+class CounterCubit extends BroadcastCubit<int> {
+  CounterCubit() : super(0);
+
+  void increment() => emit(state + 1);
+}
+
+void main() {
+  final controller = StreamController<String>(sync: true);
+  final subscription = controller.stream.listen(print);
+  final channel = StreamChannel(controller.stream, controller.sink);
+
+  // Create an instance of the cubit.
+  final cubit = CounterCubit()
+    // Subscribe the channel.
+    ..subscribe(channel)
+    // Trigger a state change which will be broadcast to subscribed channels.
+    ..increment()
+    // Unsubscribe channel.
+    ..unsubscribe(channel);
+
+  subscription.cancel();
+  cubit.close();
+}
+```
+
 [build_badge]: https://github.com/felangel/broadcast_bloc/actions/workflows/main.yaml/badge.svg
 [build_link]: https://github.com/felangel/broadcast_bloc/actions/workflows/main.yaml
 [coverage_badge]: https://raw.githubusercontent.com/felangel/broadcast_bloc/main/coverage_badge.svg
