@@ -4,7 +4,7 @@ repository: https://github.com/felangel/broadcast_bloc
 version: 0.1.0-dev.1
 
 environment:
-  sdk: ">=2.18.0 <3.0.0"
+  sdk: ">=2.19.0 <3.0.0"
 
 dependencies:
   bloc: ^8.0.0
@@ -13,4 +13,4 @@ dependencies:
 dev_dependencies:
   mocktail: ^0.3.0
   test: ^1.19.2
-  very_good_analysis: ^3.1.0
+  very_good_analysis: ^4.0.0
