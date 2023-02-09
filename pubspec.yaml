@@ -1,7 +1,7 @@
 name: broadcast_bloc
 description: An extension to the bloc state management library which adds support for broadcasting state changes to stream channels.
 repository: https://github.com/felangel/broadcast_bloc
-version: 0.1.0-dev.1
+version: 0.1.0-dev.2
 
 environment:
   sdk: ">=2.19.0 <3.0.0"
