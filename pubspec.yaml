@@ -7,7 +7,7 @@ environment:
   sdk: ">=2.19.0 <3.0.0"
 
 dependencies:
-  bloc: ^8.0.0
+  bloc: ">=8.0.0 <10.0.0"
   stream_channel: ^2.0.0
 
 dev_dependencies:
