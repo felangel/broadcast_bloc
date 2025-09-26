@@ -66,7 +66,7 @@ void main() {
 }
 ```
 
-[bloc_lint_badge]: https://img.shields.io/badge/style-bloc_lint-FFBD59.svg
+[bloc_lint_badge]: https://img.shields.io/badge/style-bloc_lint-20FFE4.svg
 [bloc_lint_link]: https://pub.dev/packages/bloc_lint
 [build_badge]: https://github.com/felangel/broadcast_bloc/actions/workflows/main.yaml/badge.svg
 [build_link]: https://github.com/felangel/broadcast_bloc/actions/workflows/main.yaml
